@@ -1,0 +1,159 @@
+:root {
+  --bg: #0b0e14;
+  --card: #111827;
+  --accent: #38bdf8;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.console-line {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--muted);
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.name {
+  font-size: 3.5rem;
+  color: var(--accent);
+}
+
+.hero-buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border: 1px solid var(--accent);
+  color: #000;
+  background: var(--accent);
+  text-decoration: none;
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+
+.btn.outline {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline {
+  padding: 80px;
+  max-width: 900px;
+}
+
+.timeline-item {
+  margin-left: 40px;
+  padding-left: 40px;
+  border-left: 2px solid var(--border);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-item .dot {
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 50%;
+  position: absolute;
+  left: -8px;
+  top: 10px;
+}
+
+.glow:hover {
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+.skills {
+  padding: 80px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: var(--card);
+  padding: 30px;
+  border: 1px solid var(--border);
+  transition: 0.3s ease;
+}
+
+.projects {
+  padding: 80px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: var(--card);
+  padding: 30px;
+  border: 1px solid var(--border);
+}
+
+.project-card a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer {
+  padding: 40px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.footer a {
+  color: var(--muted);
+  margin: 0 10px;
+}
