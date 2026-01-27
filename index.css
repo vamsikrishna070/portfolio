@@ -761,3 +761,7 @@ body {
     justify-content: center;
   }
 }
+.contact-link{
+  text-decoration: none;
+  color: #64748b;
+}
