@@ -661,3 +661,115 @@ body {
   flex-direction: column;
   gap: 30px;
 }
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 60px 40px 60px 120px;
+  }
+
+  .about-section,
+  .skills-section,
+  .projects-section,
+  .contact-section {
+    padding: 60px 40px;
+    margin-left: 80px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .side-bar {
+    display: none;
+  }
+
+  .hero-section {
+    padding: 60px 20px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-name {
+    font-size: 42px;
+  }
+
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .image-border {
+    width: 280px;
+    height: 280px;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-section,
+  .skills-section,
+  .projects-section,
+  .contact-section {
+    margin-left: 0;
+    padding: 60px 20px;
+  }
+
+  .journey-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-item {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 36px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+}
