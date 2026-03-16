@@ -661,6 +661,9 @@ body {
   flex-direction: column;
   gap: 30px;
 }
+
+/* Responsive Design */
+
 @media (max-width: 1024px) {
   .hero-section {
     padding: 60px 40px 60px 120px;
