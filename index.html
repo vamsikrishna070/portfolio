@@ -33,12 +33,17 @@
           <p class="greeting">Hello, I'm</p>
           <h1 class="hero-name">Vamsi Krishna</h1>
           <h2 class="hero-title">
-            I'm a <span class="highlight">Developer</span>
+            <span>I'm a</span>
+            <span class="highlight typing-role" id="typing-role"
+              >Full Stack Developer</span
+            >
           </h2>
 
           <p class="hero-desc">
             Second-year B.Tech Computer Science student focused on programming,
-            data structures, and building clean, interactive web applications.
+            data structures, and building clean, interactive web applications
+            along with a passion for photography, video editing and poster
+            design.
           </p>
 
           <div class="hero-buttons">
@@ -46,7 +51,7 @@
               <i class="fas fa-paper-plane"></i> Get in Touch
             </a>
             <a
-              href="assets/Resume-Vamsi.pdf"
+              href="assets/vamsi_resume (2).pdf"
               download
               class="btn btn-secondary"
             >
@@ -101,14 +106,14 @@
         <p>
           I build interactive web applications using HTML, CSS, JavaScript, and
           React, and work with C and C++ for strong logical foundations.
-          Alongside development, I also do video editing and poster and
-          thumbnail design, which adds a visual and user-focused perspective to
-          my work..
+          Alongside development, I also do video editing and poster design,
+          which adds a visual and user-focused perspective to my work..
         </p>
 
         <p>
-          I’ve participated in hackathons like SIH and Web FestX and built
-          projects such as a Myntra clone and a personal portfolio website.
+          I’ve participated in hackathons like Smart inida Hackathon and Code
+          For Love Hackathon in my university and built projects such as a
+          Myntra clone and a personal portfolio website.
         </p>
 
         <div class="journey-cards">
@@ -365,5 +370,57 @@
         </form> -->
       </div>
     </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const typingRole = document.getElementById("typing-role");
+
+        if (!typingRole) {
+          return;
+        }
+
+        const roles = [
+          "Web-Developer",
+          "Video & Photo-Editor",
+          "Poster-Designer",
+        ];
+        const typingSpeed = 110;
+        const deletingSpeed = 60;
+        const holdDelay = 1400;
+        const nextWordDelay = 250;
+
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        const typeRole = () => {
+          const currentRole = roles[roleIndex];
+
+          if (isDeleting) {
+            charIndex -= 1;
+          } else {
+            charIndex += 1;
+          }
+
+          typingRole.textContent = currentRole.slice(0, charIndex);
+
+          let delay = isDeleting ? deletingSpeed : typingSpeed;
+
+          if (!isDeleting && charIndex === currentRole.length) {
+            delay = holdDelay;
+            isDeleting = true;
+          } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            delay = nextWordDelay;
+          }
+
+          window.setTimeout(typeRole, delay);
+        };
+
+        typingRole.textContent = "";
+        typeRole();
+      });
+    </script>
   </body>
 </html>
