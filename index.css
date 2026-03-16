@@ -818,6 +818,36 @@ body {
     font-size: 26px;
   }
 
+  .hero-section {
+    padding: 40px 16px;
+  }
+
+  .hero-content {
+    gap: 28px;
+  }
+
+  .social-links {
+    margin-top: 10px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-image {
+    margin-top: 23px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .image-border {
+    width: min(78vw, 270px);
+    height: min(78vw, 270px);
+  }
+
+  .image-border::before {
+    inset: -10px;
+  }
+
   .section-title {
     font-size: 32px;
   }
