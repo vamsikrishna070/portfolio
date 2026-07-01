@@ -51,7 +51,7 @@
               <i class="fas fa-paper-plane"></i> Get in Touch
             </a>
             <a
-              href="assets/vamsi_resume (2).pdf"
+              href="assets/Kaza_VamsiKrisha_Resume.pdf"
               download
               class="btn btn-secondary"
             >
@@ -252,32 +252,42 @@
 
         <div class="project-card">
           <div class="project-icon">
-            <i class="fas fa-laptop-code"></i>
+            <i class="fas fa-users"></i>
           </div>
-          <h3>Portfolio Website</h3>
+
+          <h3>Village Connect</h3>
+
           <p>
-            A responsive personal portfolio website built using HTML, CSS, and
-            JavaScript to showcase my skills, projects, and academic journey
-            with smooth animations and a clean UI.
+            A full-stack web platform that connects rural communities with
+            essential services through a single portal. The application provides
+            access to healthcare, agriculture, job opportunities, grievance
+            management, and government schemes, making village services more
+            accessible and efficient.
           </p>
+
           <div class="project-tech">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>MongoDB</span>
           </div>
+
           <div class="project-links">
             <a
-              href="https://github.com/vamsikrishna070/portfolio"
+              href="https://github.com/vamsikrishna070/village-connect"
               target="_blank"
               class="project-link"
-              ><i class="fab fa-github"></i> Code</a
             >
+              <i class="fab fa-github"></i> Code
+            </a>
+
             <a
-              href="https://vamsikrishna-portfolio-website.vercel.app/"
+              href="https://village-connect-two.vercel.app/"
               target="_blank"
               class="project-link"
-              ><i class="fas fa-external-link-alt"></i> Live</a
             >
+              <i class="fas fa-external-link-alt"></i> Live
+            </a>
           </div>
         </div>
 
@@ -371,56 +381,6 @@
       </div>
     </section>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const typingRole = document.getElementById("typing-role");
-
-        if (!typingRole) {
-          return;
-        }
-
-        const roles = [
-          "Web-Developer",
-          "Video & Photo-Editor",
-          "Poster-Designer",
-        ];
-        const typingSpeed = 110;
-        const deletingSpeed = 60;
-        const holdDelay = 1400;
-        const nextWordDelay = 250;
-
-        let roleIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-
-        const typeRole = () => {
-          const currentRole = roles[roleIndex];
-
-          if (isDeleting) {
-            charIndex -= 1;
-          } else {
-            charIndex += 1;
-          }
-
-          typingRole.textContent = currentRole.slice(0, charIndex);
-
-          let delay = isDeleting ? deletingSpeed : typingSpeed;
-
-          if (!isDeleting && charIndex === currentRole.length) {
-            delay = holdDelay;
-            isDeleting = true;
-          } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            delay = nextWordDelay;
-          }
-
-          window.setTimeout(typeRole, delay);
-        };
-
-        typingRole.textContent = "";
-        typeRole();
-      });
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>
